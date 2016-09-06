@@ -16,7 +16,7 @@ public class Quiz extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.quiz);
         Random r = new Random();
         Random r2= new Random();
         final int i1 = r.nextInt(10-1) + 1;
@@ -37,10 +37,10 @@ public class Quiz extends Activity{
         generate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                t1.setText(i1);
-                t2.setText(i2);
+                t1.setText(Integer.toString(i1));
+                t2.setText(Integer.toString(i2));
                 e.setText("?");
-                generate.setVisibility(View.GONE);
+                generate.setVisibility(View.INVISIBLE);
                 commit.setVisibility(View.VISIBLE);
                 e.setVisibility(View.VISIBLE);
             }
