@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -27,17 +28,37 @@ public class Quiz extends Activity{
         t1= (TextView) findViewById(R.id.textView121);
         t2= (TextView) findViewById(R.id.textView123);
         t3= (TextView) findViewById(R.id.textView125);
-        Button generate;
+        final Button generate;
         generate = (Button) findViewById(R.id.button4);
-
+        final Button commit;
+        commit= (Button) findViewById(R.id.button5);
+        final EditText e;
+        e= (EditText) findViewById(R.id.editText) ;
         generate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 t1.setText(i1);
                 t2.setText(i2);
-                t3.setText("?");
+                e.setText("?");
+                generate.setVisibility(View.GONE);
+                commit.setVisibility(View.VISIBLE);
+                e.setVisibility(View.VISIBLE);
             }
         });
+        commit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(e.getText().equals(t3)){
+                    t3.setVisibility(View.VISIBLE);
+                    t3.setText("Bravo");
+
+                }else{
+                    t3.setVisibility(View.VISIBLE);
+                    t3.setText("No Bravo");
+                }
+            }
+        });
+
 
     }
 }

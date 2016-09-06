@@ -38,7 +38,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView125"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:visibility="invisible" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:visibility="invisible" />
 
     </LinearLayout>
 
@@ -50,4 +57,13 @@
         android:layout_gravity="center_vertical"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Commit"
+        android:id="@+id/button5"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
 </RelativeLayout>
