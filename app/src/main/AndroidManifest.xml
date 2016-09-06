@@ -11,6 +11,9 @@
         <activity android:name=".MainActivity">
 
         </activity>
+        <activity android:name=".Quiz">
+
+        </activity>
         <activity android:name=".main_menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

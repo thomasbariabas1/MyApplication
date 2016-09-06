@@ -22,6 +22,7 @@ public class main_menu extends AppCompatActivity {
         quiz =(Button) findViewById(R.id.button2);
         more = (Button) findViewById(R.id.button3);
         final Intent i = new Intent(this,MainActivity.class);
+        final Intent i2 = new Intent(this,Quiz.class);
         multit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,5 +31,11 @@ public class main_menu extends AppCompatActivity {
             }
         });
 
+        quiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(i2);
+            }
+        });
     }
 }
